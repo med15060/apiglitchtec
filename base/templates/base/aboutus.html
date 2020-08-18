@@ -1,0 +1,491 @@
+{% load static %}
+<html lang="en"><head>
+    <meta charset="UTF-8">
+
+    <title>glitch tech </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.0/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
+    <link rel="stylesheet" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/css/mdb.min.css">
+    <link rel="stylesheet" href="{% static 'css/index.css'%}">
+
+
+
+
+
+
+    </head>
+    <body translate="no" >
+
+    <nav class="navbar-one navbar-fixed-top">
+    <div class="container-fluid">
+
+      <div id="nav-icon2"  class="navbar-header" >
+        <a class="navbar-home" href="#home" role="button"> GLITCHTEC
+    <img class="logo-img-on" src="{%static 'images/pics/3.png'%}">
+
+        </a>
+
+        <div class="logo">
+          GLITCHTEC<img class="logo-img" src="{%static 'images/pics/3.png'%}">
+       </div>
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#scroll-spy" aria-expanded="false">
+    <span class="sr-only">Toggle navigation</span>
+    <i class="material-icons"></i>
+    </button>
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="scroll-spy">
+
+    <ul class="nav navbar-nav ">
+
+    <li><a href="{% url 'index'%}">home</a></li>
+    <li><a href="{% url 'about'%}">about</a></li>
+
+    <li><a href="{% url 'contact'%}"> contact us</a></li>
+    <li><button id="nav-form-open" class="btn-hover color-9">Sign up!</button></li>
+    <li><button id="nav-login-form-open" class="btn-hover color-1">Log in</button></li>
+    </ul>
+    </div>
+    </div>
+    </nav>
+
+
+    <div class="screen-one">
+      <div class="header" style="position: relative;">
+      <h1 id="reg-h-one">Log in</h1>
+
+      <div ><a class="close-one" style="    position: absolute;
+        background-color: black;
+        top: -47px;
+        right: -11px;
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 100%;
+        text-decoration: none;
+        text-align: center; position: absolute;" href="#">x</a></div>
+      </div>
+      <div class="logo-f-one" style="width: 120px; height: 120px; top: 10px;"></div>
+
+      <form id="login-form-one" style="display: block;" method="post">
+        {% csrf_token %}
+      <input type="text" name="username" placeholder="Username">
+      <input type="password" name="password" placeholder="Password">
+
+      <input type="submit" name="htmlsubmitbutton1" class="login-btn"  value="Log in">
+
+      </form>
+      <form id="fpass-form-one" style="display: none;">
+        <input type="text" name="forgotten" placeholder="E-mail or phone number">
+        <a href="#" class="login-btn" id="getpass-btn-one">Get Password</a>
+        </form>
+        <div class="other-options" >
+        <div class="option" id="newUser-one"><p class="option-text">log in</p></div>
+        <div class="option" id="fPass-one"><p class="option-text"> Forgotten password</p></div>
+        </div>
+
+      </div>
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+<div id="about-head" class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6 col-md-12 fh img-div">
+            <img class="ab-logo rounded mx-auto d-block" src="{% static 'images/pics/about-logo.png'%}">
+        </div>
+        <div class="col-lg-6 col-md-12 fh text-div">
+            <h1 style="margin-bottom: -200px;"><p>about</p>GLITCHTEC</h1>
+            <p class="text-p">
+              Welcome to Glitchtec, your number one source for any kind of IT support.
+              We're dedicated to giving you the best possible support, with a focus on
+              speed, trust, and sustainability. Our mission is to enable people to use their
+              technology at its fullest potential.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<section id="ab-full" class="fh">
+    <div class="container-fluid who-are fh ">
+        <div class="row">
+            <div class="col-lg-6 col-md-12  " style="padding-top: 5%;"><div class="row">
+    <div class="col-xs-12">
+    <div class="section-header">
+      Top Quality Service
+    </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-11">
+    <p>
+      We believe that tech-related issues are stressful enough, getting help with these issues should
+      be fast and stress-free. Our network of experienced IT professionals is dedicated to carrying out
+      our mission--enabling people to use their technology to its fullest potential--by solving any
+      problems or limitations you may encounter when using your technology, freeing you to focus on
+      what matters. High quality IT support is expensive and unavailable to most people, while widely
+      available support can be as frustrating as the problem itself. With our large network of
+      technicians and user-friendly interface, we provide you with unmatched speed and reliability, to
+      give stress-free solutions to any hardware or software problem you may encounter. We hope
+      you enjoy our service as much as we enjoy offering it to you. If you have any questions or
+      comments, please don't hesitate to contact us.
+    </p>
+    </div>
+    </div>
+  </div>
+
+            <div class="col-lg-6 col-md-12  ">
+                <img class="ab-logo rounded mx-auto d-block" src="{% static 'images/pics/11.png'%}" alt="">
+            </div>
+
+    </div>
+    </div>
+    </section>
+
+
+
+
+
+
+
+
+    <section  class="fh">
+      <div class="container-fluid who-are fh ">
+          <div class="row">
+              <div class="col-lg-6 col-md-12  " style="padding-top: 5%;"><div class="row">
+      <div class="col-xs-12">
+      <div class="section-header">
+        Sustainability
+            </div>
+      </div>
+      </div>
+      <div class="row">
+      <div class="col-lg-11">
+      <p>
+        
+        At Glitchtec, we believe that a throw-away culture is not sustainable. We hope that as we
+        expand, consumers will be more likely to get their broken electronics repaired rather than buying
+        a replacement and throwing the old ones away. We also hope that people will not shy away
+        from any sort of software due to issues or general confusion, but rather seek out our help in
+        fixing issues or using the software. The throwaway culture is perpetrated by many large device
+        manufacturers, they try to prevent third-party technicians and repair shops from working on their
+        products, creating a monopoly on repair. This allows them to charge huge premiums on repairs,
+        in many cases, forcing consumers to buy a new device rather than fixing their current one. At
+        Glitchtec we aim to provide quality hardware repairs at a fair price, giving control over your
+        device back to you. </p>
+      </div>
+      <br>
+
+      <div class="row">
+        <div class="col-xs-12">
+      <div class="section-header">
+           A Letter from our Co-Founders
+          </div>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-11">
+                <p>
+                  
+        
+                  (optional, more political/ painting us as part of a movement/ power to the people)
+                  Our Co-founders, Jack Cameron and Yo Jeremijenko-Conley decided to incorporate Glitchtec in
+                  May of 2020. In the midst of the largest recession since the great depression, they saw that
+                  large tech companies were doing fine while smaller businesses and individuals were struggling
+                  to stay afloat. It was no secret that these tech giants all had a monopoly in some way or another
+                  and gave no room for small business to grow in the tech industry. This is when they came
+                  across the right to repair movement, a political movement aimed to give consumers control over
+                  the devices they own rather than be at the mercy of the manufacturers. This reminded Jack and
+                  Yo of the anti-trust movements of the early 20th century, which inspired the idea that--much like
+                  the unions of the early 20th century-- strength in numbers could combat these modern tech
+                  monopolies. More specifically, if consumers, independent tech support/repair businesses, and
+                  skilled technicians came together to form a network, they would form a reliable service platform
+                  that would give consumers choice in their IT support and repair, freeing them from being
+                  dependent on the manufacturers of their products.
+                </p>
+                </div>
+              </div>
+      </div>
+    </div>
+  
+              <div class="col-lg-6 col-md-12  ">
+                <div class="section-header">
+                  <br>
+                  Working as a Technician
+                </div>
+                <p>
+                
+    
+                  Despite the rising demand for IT technicians and repairmen, individuals who
+                  possess these skills still struggle to penetrate the market. You might be one of them; Highly
+                  skilled, with a little extra time, and an interest in doing what you do best. At Glitchtec, we believe
+                  that if you have these skills, you should be able to monetize them. Our platform provides you
+                  with an alternative form of income in a world where it is increasingly difficult to find jobs that
+                  utilize your skillset. High quality and affordable IT support should not come at the expense of
+                  those providing support. Working as a technician on our platform, you will set your own hours,
+                  choose which tickets you will solve, and get paid per fix, not by the hour. This means that
+                  anyone with IT skills can make money on our platform, whether you have had years of
+                  experience in IT support or only have skills with one specific software or type of IT problem, and
+                  work on our platform full time or only a few hours a week. Our platform allows you to customize
+                  your profile with relative skills, preferred hours and much more, we will send you notifications
+                  when customers post tickets relevant to your profile and/or previous tickets you have solved,
+                  eliminating the need to search through tickets in order to find ones relevant to your skills. At
+                  Glitchtec we strive to give our customers the highest quality service at an affordable price, but
+                  we will never come at a sacrifice the well-being of our technicians. Rather, we encourage
+                  technicians to build personal relationships with customers by giving monetary incentives to both
+                  technicians and customers for repeat customer-technician pairs. We believe that these
+                  relationships will help technicians give top quality service to customers they have previously
+                  worked with, and is the most effective way to build quality service and trust.
+                  Finally, unlike many gig-economy platforms, we believe that exceptional performance
+                  should be rewarded with more than a good rating on your profile. We aim to give technicians not
+                  only a means to monetize their skills, but also opportunities and resources for career
+                  advancement. When filling IT-related positions in our company, we will always search for
+                  relevant candidates in our network of technicians, as well as providing endorsements and
+                  references when technicians are searching for employment.
+                  
+                </p>              </div>
+  
+      </div>
+      </div>
+      </section>
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- Footer -->
+<footer class="page-footer font-small stylish-color-dark pt-4" >
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-4 mx-auto">
+
+        <!-- Content
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
+        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+          consectetur
+          adipisicing elit.</p> -->
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">home</a>
+          </li>
+          <li>
+            <a href="#!">about</a>
+          </li>
+          <li>
+            <a href="#!"> quizz</a>
+          </li>
+          <li>
+            <a href="#!">contact us</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <hr>
+
+
+
+
+
+
+  <!-- Call to action -->
+  <ul class="list-unstyled list-inline text-center py-2">
+    <li class="list-inline-item">
+      <h5 class="mb-1">Register for free</h5>
+    </li>
+    <li class="list-inline-item">
+      <!-- <a href="#!" class="btn btn-danger btn-rounded waves-effect waves-light">Sign up!</a> -->
+
+
+      <div class="screen">
+        <div class="header" style="position: relative;">
+        <h1>Registration</h1>
+
+        <div id="popup-close-button  "><a class="close" style="    position: absolute;
+          background-color: black;
+          top: -47px;
+          right: -11px;
+          font-size: 16px;
+          padding: 10px;
+          border-radius: 100%;
+          text-decoration: none;
+          text-align: center; position: absolute;" href="#">x</a></div>
+        </div>
+        <div class="logo-f" style="width: 120px; height: 120px; top: 10px;"></div>
+        <form id="registration-form" style="display: block;" method="post">
+          {% csrf_token %}
+          <input type="text" id="{{form.username.auto_id}}"  name="{{form.username.html_name}}" placeholder="Username">
+        <input type="email" id="{{form.email.auto_id}}"  name="{{form.email.html_name}}" placeholder="E-mail">
+        <input type="password" id="{{form.password1.auto_id}}"  name="{{form.password1.html_name}}" placeholder="Password">
+        <input type="password" id="{{form.password2.auto_id}}"  name="{{form.password2.html_name}}" placeholder="Repeat password">
+        <input type="submit" name="htmlsubmitbutton2" class="login-btn" value="Sign Up">
+        </form>
+        <form id="login-form" style="display: none;">
+        <input type="email" name="email" placeholder="E-mail">
+        <input type="password" name="pass" placeholder="Password">
+        <a href="#" class="login-btn">Log in</a>
+        </form>
+        <form id="fpass-form" style="display: none;">
+        <input type="text" name="forgotten" placeholder="E-mail or phone number">
+        <a href="#" class="login-btn" id="getpass-btn">Get Password</a>
+        </form>
+        <div class="other-options" style="display: none;">
+        <div class="option" id="newUser"><p class="option-text">New User</p></div>
+        <div class="option" id="fPass"><p class="option-text"> Forgotten password</p></div>
+        </div>
+        </div>
+
+
+  <!-- Call to action -->
+  <button id="form-open" class="btn btn-danger btn-rounded waves-effect waves-light">Sign up!</button>
+
+
+
+
+</li>
+</ul>
+
+
+  <hr>
+
+  <!-- Social buttons -->
+  <ul class="list-unstyled list-inline text-center">
+    <li class="list-inline-item">
+      <a class="btn-floating btn-fb mx-1 waves-effect waves-light">
+        <i class="fab fa-facebook-f"> </i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-tw mx-1 waves-effect waves-light">
+        <i class="fab fa-twitter"> </i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-gplus mx-1 waves-effect waves-light">
+        <i class="fab fa-google-plus-g"> </i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-li mx-1 waves-effect waves-light">
+        <i class="fab fa-linkedin-in"> </i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-dribbble mx-1 waves-effect waves-light">
+        <i class="fab fa-dribbble"> </i>
+      </a>
+    </li>
+  </ul>
+  <!-- Social buttons -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/">QUANTUM</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+
+<a href="#home" role="button" class="scrollTop">
+  <svg class="lnr lnr-chevron-up"><use xlink:href="#lnr-chevron-up"></use></svg>
+  </a>
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script id="rendered-js" src="{% static 'js/index.js'%}"></script>
+
+
+
+
+    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+    </body></html>

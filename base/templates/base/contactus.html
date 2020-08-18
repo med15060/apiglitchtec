@@ -1,0 +1,390 @@
+{% load static %}
+<html lang="en"><head>
+    <meta charset="UTF-8">
+
+    <title>glitch tech </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.0/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
+    <link rel="stylesheet" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/css/mdb.min.css">
+    <link rel="stylesheet" href="{% static 'css/index.css'%}">
+
+
+
+
+
+
+    </head>
+    <body translate="no" >
+
+    <nav class="navbar-one navbar-fixed-top">
+    <div class="container-fluid">
+
+      <div id="nav-icon2"  class="navbar-header" >
+        <a class="navbar-home" href="#home" role="button"> GLITCHTEC
+    <img class="logo-img-on" src="{% static 'images/pics/3.png'%}">
+
+        </a>
+
+        <div class="logo">
+          GLITCHTEC<img class="logo-img" src="{% static 'images/pics/3.png'%}">
+       </div>
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#scroll-spy" aria-expanded="false">
+    <span class="sr-only">Toggle navigation</span>
+    <i class="material-icons"></i>
+    </button>
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="scroll-spy">
+
+    <ul class="nav navbar-nav ">
+
+      <li><a href="{% url 'index'%}">home</a></li>
+      <li><a href="{% url 'about'%}">about</a></li>
+
+      <li><a href="{% url 'contact'%}"> contact us</a></li>
+      <li><button id="nav-form-open" class="btn-hover color-9">Sign up!</button></li>
+      <li><button id="nav-login-form-open" class="btn-hover color-1">Log in</button></li>
+    </ul>
+    </div>
+    </div>
+    </nav>
+
+
+    <div class="screen-one">
+      <div class="header" style="position: relative;">
+      <h1 id="reg-h-one">Log in</h1>
+
+      <div ><a class="close-one" style="    position: absolute;
+        background-color: black;
+        top: -47px;
+        right: -11px;
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 100%;
+        text-decoration: none;
+        text-align: center; position: absolute;" href="#">x</a></div>
+      </div>
+      <div class="logo-f-one" style="width: 120px; height: 120px; top: 10px;"></div>
+
+      <form id="login-form-one" style="display: block;" method="post">
+        {% csrf_token %}
+      <input type="text" name="username" placeholder="Username">
+      <input type="password" name="password" placeholder="Password">
+
+      <input type="submit" name="htmlsubmitbutton1" class="login-btn"  value="Log in">
+
+      </form>
+      <form id="fpass-form-one" style="display: none;">
+        <input type="text" name="forgotten" placeholder="E-mail or phone number">
+        <a href="#" class="login-btn" id="getpass-btn-one">Get Password</a>
+        </form>
+        <div class="other-options" >
+        <div class="option" id="newUser-one"><p class="option-text">log in</p></div>
+        <div class="option" id="fPass-one"><p class="option-text"> Forgotten password</p></div>
+        </div>
+
+      </div>
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+<div id="contact-up" class="bg-contact100" style="background-image: url({% static 'images/pics/a.jpg'%});">
+    <div class="container-contact100">
+        <div class="wrap-contact100">
+            <div class="contact100-pic js-tilt" data-tilt>
+                <img src="{% static 'images/pics/bird.png'%}" alt="IMG">
+            </div>
+
+            <form class="contact100-form validate-form" method="post">
+              {% csrf_token %}
+                <span class="contact100-form-title">
+                    Get in touch
+                </span>
+
+                <div class="alert alert-primary" role="alert">
+                  {% for message in messages %}
+                  <h3 id='messages'>  {{message}}</h3>
+
+                  {% endfor %}
+               </div>
+
+
+                <div class="wrap-input100 validate-input" data-validate = "Name is required">
+                    <input class="input100" type="text" id="{{form.name.auto_id}}"  name="{{form.name.html_name}}" placeholder="Name">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                    <input class="input100" type="text" id="{{form.email.auto_id}}"  name="{{form.email.html_name}}" placeholder="Email">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate = "Message is required">
+                    <textarea class="input100" id="{{form.mess.auto_id}}"  name="{{form.mess.html_name}}" placeholder="Message"></textarea>
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="container-contact100-form-btn">
+                    <button class="contact100-form-btn">
+                        Send
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- Footer -->
+<footer class="page-footer font-small stylish-color-dark pt-4" >
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-4 mx-auto">
+
+        <!-- Content -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
+        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+          consectetur
+          adipisicing elit.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">home</a>
+          </li>
+          <li>
+            <a href="#!">about</a>
+          </li>
+          <li>
+            <a href="#!"> quizz</a>
+          </li>
+          <li>
+            <a href="#!">contact us</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <hr>
+
+
+
+
+
+
+  <!-- Call to action -->
+  <ul class="list-unstyled list-inline text-center py-2">
+    <li class="list-inline-item">
+      <h5 class="mb-1">Register for free</h5>
+    </li>
+    <li class="list-inline-item">
+      <!-- <a href="#!" class="btn btn-danger btn-rounded waves-effect waves-light">Sign up!</a> -->
+
+
+      <div class="screen">
+        <div class="header" style="position: relative;">
+        <h1>Registration</h1>
+
+        <div id="popup-close-button  "><a class="close" style="    position: absolute;
+          background-color: black;
+          top: -47px;
+          right: -11px;
+          font-size: 16px;
+          padding: 10px;
+          border-radius: 100%;
+          text-decoration: none;
+          text-align: center; position: absolute;" href="#">x</a></div>
+        </div>
+        <div class="logo-f" style="width: 120px; height: 120px; top: 10px;"></div>
+        <form id="registration-form" style="display: block;" method="post">
+          {% csrf_token %}
+          <input type="text" id="{{form.username.auto_id}}"  name="{{form.username.html_name}}" placeholder="Username">
+        <input type="email" id="{{form.email.auto_id}}"  name="{{form.email.html_name}}" placeholder="E-mail">
+        <input type="password" id="{{form.password1.auto_id}}"  name="{{form.password1.html_name}}" placeholder="Password">
+        <input type="password" id="{{form.password2.auto_id}}"  name="{{form.password2.html_name}}" placeholder="Repeat password">
+        <input type="submit" name="htmlsubmitbutton2" class="login-btn" value="Sign Up">
+        </form>
+        <form id="login-form" style="display: none;">
+        <input type="email" name="email" placeholder="E-mail">
+        <input type="password" name="pass" placeholder="Password">
+        <a href="#" class="login-btn">Log in</a>
+        </form>
+        <form id="fpass-form" style="display: none;">
+        <input type="text" name="forgotten" placeholder="E-mail or phone number">
+        <a href="#" class="login-btn" id="getpass-btn">Get Password</a>
+        </form>
+        <div class="other-options" style="display: none;">
+        <div class="option" id="newUser"><p class="option-text">New User</p></div>
+        <div class="option" id="fPass"><p class="option-text"> Forgotten password</p></div>
+        </div>
+        </div>
+
+
+  <!-- Call to action -->
+  <button id="form-open" class="btn btn-danger btn-rounded waves-effect waves-light">Sign up!</button>
+
+
+
+
+</li>
+</ul>
+
+
+  <hr>
+
+  <!-- Social buttons -->
+  <ul class="list-unstyled list-inline text-center">
+    <li class="list-inline-item">
+      <a class="btn-floating btn-fb mx-1 waves-effect waves-light">
+        <i class="fab fa-facebook-f"> </i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-tw mx-1 waves-effect waves-light">
+        <i class="fab fa-twitter"> </i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-gplus mx-1 waves-effect waves-light">
+        <i class="fab fa-google-plus-g"> </i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-li mx-1 waves-effect waves-light">
+        <i class="fab fa-linkedin-in"> </i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-dribbble mx-1 waves-effect waves-light">
+        <i class="fab fa-dribbble"> </i>
+      </a>
+    </li>
+  </ul>
+  <!-- Social buttons -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/">QUANTUM</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+
+<a href="#home" role="button" class="scrollTop">
+  <svg class="lnr lnr-chevron-up"><use xlink:href="#lnr-chevron-up"></use></svg>
+  </a>
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script id="rendered-js" src="{% static 'js/index.js'%}"></script>
+
+
+
+
+    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+    </body></html>

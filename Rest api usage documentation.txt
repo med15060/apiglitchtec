@@ -1,0 +1,88 @@
+For see all user list url:http://127.0.0.1:8000/api/user/  and url name = userlist
+
+For see dynamic  userdetails url:http://127.0.0.1:8000/api/user/1  and url name = userdetail 
+
+
+For create user url:http://127.0.0.1:8000/api/user-create/  and url name = usercreate
+
+
+For update user  url:http://127.0.0.1:8000/api/user-update/1   and url name = userupdate
+
+
+For delete user  url:http://127.0.0.1:8000/api/user-delete/1  and url name = userdelete
+
+
+
+For Usersignup  url:http://127.0.0.1:8000/api/signup/  and url name = signup
+
+
+For see user profile  url:http://127.0.0.1:8000/api/signup/1/ and url name = profile
+
+
+For see all user profile  url:http://127.0.0.1:8000/api/signuplist/      and url name = signuplist
+
+
+
+For see all user profile  url:http://127.0.0.1:8000/api/signuplist/      and url name = signuplist
+
+
+
+Login
+For user login url:http://127.0.0.1:8000/api-token-auth/    post username and password
+
+
+
+
+
+  ----------job list ----------
+
+
+For see all job list url:http:http://127.0.0.1:8000/api/job/    and url name = joblist
+
+
+
+
+For see dynamic  job details url:http://127.0.0.1:8000/api/job/1   and url name = jobdetail 
+
+
+
+
+For create job   url:http:http://127.0.0.1:8000/api/job-create/    and url name = jobcreate
+
+
+For update job   url:http:http://127.0.0.1:8000/api/job-update/1    and url name = jobupdate
+
+
+For delete job   url:http:http://127.0.0.1:8000/api/job-delete/1    and url name = jobdelete
+
+
+For see all order list url:http://127.0.0.1:8000/api/order/  and url name = orderlist
+
+
+
+For see dynamic  order details url:http://127.0.0.1:8000/api/order/1   and url name = orderdetail 
+
+
+
+For create order  url:http:http://127.0.0.1:8000/api/order-create/    and url name = ordercreate
+
+
+
+For delete order  url:http:http://127.0.0.1:8000/api/order-delete/1    and url name = orderdelete
+
+
+
+
+For checkout with paypal url: http://127.0.0.1:8000/api/checkout/  url name= paypal    you have to set up client_ID,client_Secret also return url for redirect paypal page and cancel url
+
+
+Google auth ->
+
+url: http://127.0.0.1:8000/api/google/  
+
+
+To use code params on SocialLoginView endpoint:
+
+create redirect uri that accessible (I think it's on frontend, or you can use simple view)
+use https callback (I use ngrok to do it in my local development)
+access the url directly (dont use google oauth playgroud to get code, because the client_id is different) or just copy the request url on oauth palygroud and change the redirect_uri and cliend_id. here is the link https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=<https_callback>&prompt=consent&response_type=code&client_id=<cliend_id>&scope=email&access_type=offline
